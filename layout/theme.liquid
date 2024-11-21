@@ -1,0 +1,14 @@
+<html>
+<head>
+    {{ content_for_header }}
+    {{ 'styles.css' | asset_url | stylesheet_tag }}
+</head>
+<body>
+    {% section 'header.liquid' %}
+    {{ content_for_layout }}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Roboto:ital,wght@0,400;1,300&family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="{{ '360_view.js' | asset_url }}"></script>
+    </body>
+</html>

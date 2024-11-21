@@ -1,0 +1,17 @@
+<form class="search" action="/search">
+    <input type="text" placeholder="Search" name="q" value="{{ search.terms | escape }}"  />
+    <input type="submit" value="Search" />
+</form>
+
+{% assign product= all_products['Car'] %}
+<h2>{{ product.title }}</h2>
+<div id="container" data-images='{{ product.metafields.custom.360_images }}'>
+    <img id="product-image" src="">
+    <div class="nav-button-container">
+        <button id="prev" class="nav-button"> Rotate Left </button>
+        <button id="next" class="nav-button"> Rotate Right </button>
+    </div>
+</div>
+<div class='price'>
+    <p>{{ product.price | money }}</p>
+</div>

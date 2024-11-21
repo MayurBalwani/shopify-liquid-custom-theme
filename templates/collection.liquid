@@ -1,0 +1,7 @@
+<h1>This is the collection </h1>
+
+{% for product in collection.products %}
+    <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
+    <img src="{{ product.featured_image | img_url }}">
+    <p>{{ product.price | money}}</p>
+{% endfor %}
